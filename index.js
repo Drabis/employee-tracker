@@ -1,8 +1,10 @@
 const mysql = require('mysql');
 const inquirer = require('inquirer');
 const term = require("terminal-kit").terminal;
+const display = require('./DisplayMess');
 require('console.table');
 express = require("express");
+
 
 const connection = mysql.createConnection({
   host: 'localhost',
@@ -11,8 +13,8 @@ const connection = mysql.createConnection({
   // Your username
   user: 'root',
   // Be sure to update with your own MySQL password!
-  password: '',
-  database: 'employee_db',
+  password: 'Senateur24',
+  database: 'employee_db'
 });
 
 connection.connect((err) => {
@@ -109,7 +111,7 @@ const displayEmployees = () => {
       init();
     })
   };
-  
+  // function that view department
   const viewDepartments = () => {
     const depQuery = `SELECT * FROM department`
     connection.query(depQuery, (err, data) => {
@@ -118,7 +120,7 @@ const displayEmployees = () => {
       init();
     })
   };
-  
+  // function that view roles
   const viewRoles = () => {
     const roleQuery = `SELECT * FROM role`
     connection.query(roleQuery, (err, data) => {
@@ -324,9 +326,9 @@ const displayEmployees = () => {
                 connection.query(query1, [input2.roleId, input1.employeeId], (err, res) => {
                 //   const tempPosition;
                   // will return the updated position
-                  for (const k = 0; k < roles.length; k++) {
-                    if (roles[k].value == input2.roleId) {
-                      tempPosition = roles[k].name;
+                  for (const i = 0; i < roles.length; i++) {
+                    if (roles[i].value == input2.roleId) {
+                      tempPosition = roles[i].name;
                     }
                   }
                   // will return the employee
