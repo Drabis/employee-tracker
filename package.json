@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/Drabis/employee-tracker#readme",
   "dependencies": {
-    "mysql": "^2.18.1"
+    "console.table": "^0.10.0",
+    "figlet": "^1.5.0",
+    "inquirer": "^0.2.3",
+    "mysql": "^2.18.1",
+    "terminal-kit": "^2.0.7"
   }
 }
