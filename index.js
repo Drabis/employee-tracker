@@ -23,6 +23,7 @@ connection.connect((err) => {
 });
 
 const init = () => {
+  // console.log(display);
   inquirer
     .prompt({
       name: 'start',
@@ -99,7 +100,7 @@ const init = () => {
 //function to display all employees//
 const displayEmployees = () => {
     const emQuery = `SELECT employee.id, employee.first_name, employee.last_name, role.title AS role, 
-    CONCAT(manager.first_name,' ',manager.last_name) AS manager, department.name
+    CONCAT(manager.first_name, manager.last_name) AS manager, department.name
     FROM employee 
     LEFT JOIN role ON employee.role_id = role.id 
     LEFT JOIN department ON role.department_id = department.id 

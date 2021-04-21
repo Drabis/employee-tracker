@@ -1,9 +1,9 @@
 USE employee_db;
 
 -- Department table
-SET SQL_SAFE_UPDATE = 0;
+
 DELETE FROM department;
-SET SQL_SAFE_UPDATES = 1;
+
 ALTER TABLE department AUTO_INCREMENT = 1;
 
 INSERT INTO department
@@ -20,9 +20,9 @@ VALUES
 
 
 -- ROLE TABLE 
-SET SQL_SAFE_UPDATES = 0;
+
 DELETE FROM role;
-SET SQL_SAFE_UPDATES = 1;
+
 ALTER TABLE role AUTO_INCREMENT = 1;
 INSERT INTO role
 	(title, salary, department_id)
@@ -46,9 +46,7 @@ VALUES
 
 
 -- EMPLOYEE TABLE 
-SET SQL_SAFE_UPDATES = 0;
 DELETE FROM employee;
-SET SQL_SAFE_UPDATES = 1;
 ALTER TABLE employee AUTO_INCREMENT = 1;
 INSERT INTO employee
 	(first_name, last_name, role_id, manager_id)
@@ -71,3 +69,5 @@ VALUES
 	("Oscar", "Kienou", 16,4),
 	("August", "Kienou", 17, null),
 	("Adam", "Sylla", 18, 8);
+
+-- 19:16:44	DELETE FROM department	Error Code: 1175. You are using safe update mode and you tried to update a table without a WHERE that uses a KEY column.  To disable safe mode, toggle the option in Preferences -> SQL Editor and reconnect.	0.0088 sec
