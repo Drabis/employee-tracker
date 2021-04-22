@@ -5,7 +5,7 @@ const display = require('./DisplayMess');
 require('console.table');
 express = require("express");
 
-display.start()
+
 const connection = mysql.createConnection({
   host: 'localhost',
   // Your port; if not 3306
@@ -13,7 +13,7 @@ const connection = mysql.createConnection({
   // Your username
   user: 'root',
   // Be sure to update with your own MySQL password!
-  password: 'Senateur24',
+  password: '',
   database: 'employee_db'
 });
 
@@ -29,7 +29,7 @@ const init = () => {
       type: 'list',
       message: 'What would you like to do?',
       choices: ["View All Employees", "View All Departments", "View All Roles", "View All Employees By Department", "View All Employees By Manager",
-      "Add Employee", "Remove Employee", "Update Employee Role", "Add Employee Role", "Remove Role", "Add New Department", "Remove Department", "Exit"]
+      "Add Employee", "Remove Employee", "Update Employee Role", "Add Employee Role", "Remove Role", "Add New Department", "Remove Department"]
     })
     .then((answer) => {
       switch (answer.start) {
@@ -88,11 +88,6 @@ const init = () => {
         case "Update Employee Manager":
           updateEmpManager();
           break;
-
-
-          case "Exit":
-            display.exit();
-            break;
 
         default:
           console.log(`Invalid action: ${answer.start}`);
@@ -265,7 +260,7 @@ const displayEmployees = () => {
         })
     })
   };
-  // function to remove role
+  
   const removeRole = () => {
     let query1 = `SELECT * FROM role`
     connection.query(query1, (err, res) => {
@@ -290,7 +285,7 @@ const displayEmployees = () => {
   };
   
   //function to update employee role
-  const updateEmpRole = () => {
+  function updateEmpRole() {
     let query = ("SELECT * FROM employee");
   
     connection.query(query, (err, response) => {
@@ -359,7 +354,7 @@ const displayEmployees = () => {
   };
   
   //function to add a new role
-  const addRole = () => {
+  function addRole() {
     let query1 = `SELECT * FROM role`
     connection.query(query1, (err, data) => {
       if (err) throw err
@@ -416,7 +411,7 @@ const displayEmployees = () => {
         })
     })
   };
-  // Function to remove Department
+  
   const removeDept = () => {
     let query1 = `SELECT * FROM department`
     connection.query(query1, (err, res) => {
@@ -436,7 +431,7 @@ const displayEmployees = () => {
             console.log("Department removed");
             init();
         })
+         
         });
     });
 };
-connection.end();
