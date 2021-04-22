@@ -10,7 +10,7 @@
   ## Description
   Using the command-line application that at a minimum allows the user to: * Add departments, roles, employees * View departments, roles, employees * Update employee roles * Update employee managers * View employees by manager * Delete departments, roles, and employees * View the total utilized budget of a department -- ie the combined salaries of all employees in that department.
   
-  You can see the walkthrough video here : https://drive.google.com/file/d/1bwfoIbu3CLB-y17URkKqwtaWfZsvaQvW/view?usp=sharing 
+  You can see the walkthrough video here : https://drive.google.com/file/d/1dapUf4FakHFPJdbxkGMlFa1xaP-C7XPS/view?usp=sharing
 
   ## Installation
   Click the GitHub link provided above to the APP REPO. Click on the green button that says Clone or Download and Choose how you would like to download: using the SSH/HTTPS keys or download the zip file. If using SSH/HTTPS Key: You will copy the link shown and type git clone paste URL here. If using Download ZIP: Click on Download Zip. Locate the file and double-click it to unzip the file. Locate the unzipped folder and open it
