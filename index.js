@@ -331,14 +331,14 @@ const displayEmployees = () => {
                 connection.query(query1, [input2.roleId, input1.employeeId], (err, res) => {
                 //   const tempPosition;
                   // will return the updated position
-                  for (const i = 0; i < roles.length; i++) {
+                  for (let i = 0; i < roles.length; i++) {
                     if (roles[i].value == input2.roleId) {
                       tempPosition = roles[i].name;
                     }
                   }
                   // will return the employee
                 //   const tempName;
-                  for (const g = 0; g < employees.length; g++) {
+                  for (let g = 0; g < employees.length; g++) {
                     if (employees[g].value == input1.employeeId) {
                       tempName = employees[g].name;
                     }
@@ -439,4 +439,3 @@ const displayEmployees = () => {
         });
     });
 };
-connection.end();
