@@ -7,6 +7,17 @@
   * [ Usage ](#Tests)
   * [License](#license)
 
+
+
+## Project images 
+<img width="601" alt="Screen Shot 2021-04-22 at 11 29 30 AM" src="https://user-images.githubusercontent.com/76567790/115742861-171e1480-a35f-11eb-9885-c9b7445c1a57.png">
+
+<img width="566" alt="Screen Shot 2021-04-22 at 11 29 49 AM" src="https://user-images.githubusercontent.com/76567790/115742873-1ab19b80-a35f-11eb-83b3-adf3a74c646c.png">
+
+<img width="509" alt="Screen Shot 2021-04-22 at 11 30 15 AM" src="https://user-images.githubusercontent.com/76567790/115742898-1eddb900-a35f-11eb-91c2-367fae9eb8ba.png">
+
+<img width="566" alt="Screen Shot 2021-04-22 at 11 35 44 AM" src="https://user-images.githubusercontent.com/76567790/115742932-2735f400-a35f-11eb-86bd-a78a9dbd8cc0.png">
+
   ## Description
   Using the command-line application that at a minimum allows the user to: * Add departments, roles, employees * View departments, roles, employees * Update employee roles * Update employee managers * View employees by manager * Delete departments, roles, and employees * View the total utilized budget of a department -- ie the combined salaries of all employees in that department.
   
