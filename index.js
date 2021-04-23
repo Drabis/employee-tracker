@@ -92,6 +92,7 @@ const init = () => {
 
           case "Exit":
             display.exit();
+            connection.end();
             break;
 
         default:

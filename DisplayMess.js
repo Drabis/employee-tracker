@@ -16,7 +16,7 @@ const start = () => {
 const exit = () => {
   console.log("\n");
   term.yellow(figlet.textSync('Thank You', {
-    font: 'Ghost',
+    font: 'Slant',
     horizontalLayout: 'full',
     width: 100,
     whitespaceBreak: true
